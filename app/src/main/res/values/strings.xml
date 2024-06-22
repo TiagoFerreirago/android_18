@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name" translatable="false">Aula05Uninter</string>
+    <string name="email">mail</string>
+    <string name="password">password</string>
+    <string name="forgot">forgot password</string>
+    <string name="login">login</string>
+    <string name="email_hint">Parse Mail</string>
+    <string name="senha_hint">Parse Password</string>
+</resources>

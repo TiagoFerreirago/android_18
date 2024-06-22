@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Aula05Uninter</string>
+    <string name="email">Email</string>
+    <string name="password">Senha</string>
+    <string name="forgot">esqueci a senha</string>
+    <string name="login">Acessar</string>
+    <string name="email_hint">Digite o Email</string>
+    <string name="senha_hint">Digite a Senha</string>
+</resources>
