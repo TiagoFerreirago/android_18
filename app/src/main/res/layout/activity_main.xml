@@ -8,39 +8,38 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="25dp"
+
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/txtEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:text="@string/email"
-        android:textStyle="bold" />
 
-
-    <EditText
-        android:id="@+id/edtEmail"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:hint="@string/email_hint"
-        android:inputType="textEmailAddress" />
-
-    <TextView
-        android:id="@+id/txtSenha"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="15dp"
-        android:text="@string/password"
-        android:textStyle="bold" />
+        android:hint="@string/email_hint">
 
-    <EditText
-        android:id="@+id/edtSenha"
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:id="@+id/edtMail">
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:hint="@string/senha_hint"
-        android:inputType="textPassword" />
+        android:layout_height="wrap_content"
+        android:hint="@string/senha_hint">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:id="@+id/edtPass">
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <TextView
         android:id="@+id/forgot"

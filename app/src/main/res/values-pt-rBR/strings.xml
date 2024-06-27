@@ -7,4 +7,5 @@
     <string name="login">Acessar</string>
     <string name="email_hint">Digite o Email</string>
     <string name="senha_hint">Digite a Senha</string>
+    <string name="add_task">adicionar</string>
 </resources>

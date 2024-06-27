@@ -6,4 +6,5 @@
     <string name="login">login</string>
     <string name="email_hint">Parse Mail</string>
     <string name="senha_hint">Parse Password</string>
+    <string name="add_task">adicionar</string>
 </resources>

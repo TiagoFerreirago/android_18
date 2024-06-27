@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Aula05Uninter"
         tools:targetApi="31">
         <activity
+            android:name=".telapart3list"
+            android:exported="false" />
+        <activity
             android:name=".telarecuperarasenhaaula05"
             android:exported="false" />
         <activity
