@@ -33,6 +33,9 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    viewBinding{//outra forma de pegar a referencia de um componente da tela
+        enable = true;
+    }
 }
 
 dependencies {
