@@ -1,8 +1,9 @@
 package com.uninter.aula06project.todo.data.repository
 
+import com.uninter.aula06project.todo.domain.abstractions.IToDoMemoryRepository
 import com.uninter.aula06project.todo.domain.entity.ToDo
 
-object ToDoMemoryRepository {
+object ToDoMemoryRepository : IToDoMemoryRepository{
 
     private var toDoList = listOf(
         ToDo("Harry Potter",true),
@@ -10,16 +11,16 @@ object ToDoMemoryRepository {
         ToDo("Chapeleiro Maluco",false)
     )
 
-    fun add(todo : ToDo)
+   override fun add(todo : ToDo)
     {
         toDoList.plus(todo);
     }
 
-    fun  getAll(): List<ToDo>
+    override fun  getAll(): List<ToDo>
     {
         return toDoList;
     }
-    fun delete(title : String)
+    override fun delete(title : String)
     {
         toDoList = toDoList.filter{it -> it.title != title}
     }
