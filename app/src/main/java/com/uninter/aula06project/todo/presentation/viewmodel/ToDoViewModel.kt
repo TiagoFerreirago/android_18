@@ -18,7 +18,12 @@ class ToDoViewModel : ViewModel() {
 
     }
     fun LoadTodo(){
-        todos.postValue(useCase.getAll())
+        todos.postValue(useCase.getAll())// esta carregando a lista
 
+    }
+//pegando a lista de toDoo e adicionando um novo item no layout
+    fun addToDo(){
+        var todo =  (ToDo("Novo Item", false));
+        todos.postValue(useCase.add(todo));//esta inserindo um objeto ToDoo e retornando uma lista na tela
     }
 }

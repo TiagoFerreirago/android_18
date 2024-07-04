@@ -11,9 +11,10 @@ object ToDoMemoryRepository : IToDoMemoryRepository{
         ToDo("Chapeleiro Maluco",false)
     )
 
-   override fun add(todo : ToDo)
+   override fun add(todo : ToDo): List<ToDo>
     {
-        toDoList.plus(todo);
+        return  toDoList.plus(todo);
+
     }
 
     override fun  getAll(): List<ToDo>

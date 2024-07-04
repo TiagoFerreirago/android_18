@@ -8,8 +8,8 @@ import com.uninter.aula06project.todo.domain.usecase.interfaces.IToDoUseCase
 class ToDoUseCase : IToDoUseCase{
 
     val repository : IToDoMemoryRepository = ToDoMemoryRepository;
-    override fun add(todo: ToDo) {
-        repository.add(todo);
+    override fun add(todo: ToDo): List<ToDo> {
+       return repository.add(todo);
     }
 
     override fun getAll(): List<ToDo> {

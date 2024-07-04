@@ -5,7 +5,7 @@ import com.uninter.aula06project.todo.domain.entity.ToDo
 interface IToDoMemoryRepository {
 
 
-    fun add(todo : ToDo)
+    fun add(todo : ToDo): List<ToDo>
 
     fun getAll() : List<ToDo>
 

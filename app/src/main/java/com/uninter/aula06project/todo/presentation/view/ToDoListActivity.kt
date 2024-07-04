@@ -31,12 +31,17 @@ class ToDoListActivity : AppCompatActivity() {
 
         // rcToDoList = findViewById<RecyclerView>(R.id.rcToDo)
 //verificar se tem atualização na lista e instancia o load
-        viewModel.todos.observe(this){
+        viewModel.todos.observe(this){ //observa as alterações na lista de todos
            // rcToDoList.layoutManager = LinearLayoutManager(this)
            // rcToDoList.adapter = ToDoListAdapter(it)
 
             binding.rcToDo.layoutManager = LinearLayoutManager(this)
             binding.rcToDo.adapter = ToDoListAdapter(it)
+
+            }
+        binding.btnAddTask.setOnClickListener{
+
+            viewModel.addToDo()
         }
 
 
