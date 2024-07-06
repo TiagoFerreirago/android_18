@@ -1,5 +1,6 @@
 package com.uninter.aula06project.todo.presentation.view
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
@@ -22,7 +23,7 @@ class ToDoListActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_to_do_list)
+
 
         binding = ActivityToDoListBinding.inflate(layoutInflater)
         var bind = binding.root
@@ -40,11 +41,13 @@ class ToDoListActivity : AppCompatActivity() {
 
             }
         binding.btnAddTask.setOnClickListener{
+            startActivity(Intent(this, ToDoDetailActivity::class.java))
 
-            viewModel.addToDo()
         }
+    }
 
-
-
+    override fun onResume() {
+        super.onResume()
+        viewModel.LoadTodo()//atualiza toda vez que entra um nova informação na tela
     }
 }

@@ -7,9 +7,9 @@ import com.uninter.aula06project.todo.domain.usecase.interfaces.IToDoUseCase
 
 class ToDoUseCase : IToDoUseCase{
 
-    val repository : IToDoMemoryRepository = ToDoMemoryRepository;
-    override fun add(todo: ToDo): List<ToDo> {
-       return repository.add(todo);
+   private val repository : IToDoMemoryRepository = ToDoMemoryRepository;
+    override fun add(todo: ToDo) {
+      repository.add(todo);
     }
 
     override fun getAll(): List<ToDo> {
@@ -18,6 +18,10 @@ class ToDoUseCase : IToDoUseCase{
 
     override fun delete(title: String) {
         repository.delete(title);
+    }
+
+    override fun completeToDo(toDo: ToDo) {
+        repository.completeToDo(toDo);
     }
 
 
